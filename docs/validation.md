@@ -19,11 +19,19 @@ Validated locally on 2026-10-23 with Python 3.14.8 and Home Assistant 2026.10.2.
   source/device validation, config/options, diagnostics, unload and zero services.
 
 HACS structure was checked against the current official integration documentation,
-including local brand icons. The official HACS action requires a GitHub token and
-GitHub repository metadata; its check is registered in CI, where github.token is
-provided by Actions. Local full HACS validation and remote CI results are not
-claimed. GitHub API requests were blocked with CONNECT 403; api.github.com was
-added to the cloud configuration draft, which has not been applied/published.
+including local brand icons. Remote hassfest also passed. The first CI run found a
+pip cache path error, corrected by explicitly naming requirements-dev.txt. The
+HACS action executed 10 checks: 8 passed, while repository topics and license
+metadata failed. The license file is in this PR, but GitHub's repository license
+metadata reflects the default branch until merge. Adding topics was attempted
+and rejected with “Resource not accessible by integration”; the owner must add
+home-assistant, hacs and ev-charging topics in GitHub repository settings. Do not
+ignore those checks or describe HACS as fully validated before they pass.
+
+GitHub API requests initially received CONNECT 403; api.github.com was added to
+the cloud configuration draft, and subsequent requests succeeded. Draft PR #2 is
+open. The contract proposal was posted to Honeycomb Menu NG issue #126; this is
+coordination evidence, not consumer implementation or maintainer acknowledgement.
 
 No owner HA installation, physical charging control, stable release, prerelease,
 repository rename, official HACS catalog submission or Honeycomb acknowledgement

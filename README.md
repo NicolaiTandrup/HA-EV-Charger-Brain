@@ -95,8 +95,12 @@ registers official hassfest and HACS validation; pending CI results are not a pa
 
 The repository contains the custom-component layout, versioned manifest, English
 UI translations, README and hacs.json. No catalog submission or release is made.
-Official hassfest passes locally; GitHub HACS validation must also pass on the PR
-before calling this HACS validated.
+Official hassfest passes locally and in CI. HACS ran 10 checks: eight passed;
+repository topics and default-branch license metadata remain blockers. The owner
+must add home-assistant, hacs and ev-charging topics (the integration token lacks
+repository administration permission). The license file is in this PR; GitHub
+license metadata must recognize it after review/merge. Do not call this fully HACS
+validated until those checks pass.
 Once the branch is available, HACS **Custom repositories → repository URL →
 Integration**, download the development revision if offered, restart HA and add
 the integration as above. If HACS only offers the unchanged default branch, use
@@ -118,7 +122,7 @@ Never install the default branch expecting native files before they are present.
   outside the process exists; HA shutdown stops evaluation. Consumers must expire
   cached results. No real hardware or household mapping has been tested here.
 * English translation is provided; additional locales and UI illustrations remain.
-* Honeycomb NG issue #126 coordination is pending; v1 is a documented proposal.
+* The v1 contract proposal is posted to [Honeycomb NG issue #126](https://github.com/NicolaiTandrup/honeycomb-menu-ng/issues/126); consumer implementation and acknowledgement remain pending.
 
 ## Troubleshooting, migration and rollback
 

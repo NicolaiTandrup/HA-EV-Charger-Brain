@@ -55,5 +55,5 @@ inferred association, not charging authorization, power, SOC or vehicle identity
 verified by the charger. No Honeycomb dependency is required in either direction.
 
 Breaking field/meaning changes require a schema_version increment. Adding optional
-fields is compatible. Publish this contract for Honeycomb NG issue #126 before
-claiming coordinated support; no acknowledgement is currently recorded.
+fields is compatible. The proposal is posted to [Honeycomb NG issue #126](https://github.com/NicolaiTandrup/honeycomb-menu-ng/issues/126).
+Consumer implementation and maintainer acknowledgement are still pending.
