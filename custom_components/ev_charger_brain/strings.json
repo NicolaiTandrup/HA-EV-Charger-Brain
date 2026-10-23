@@ -1,0 +1,136 @@
+{
+  "title": "EV Charger Brain",
+  "config": {
+    "step": {
+      "menu": {
+        "title": "Configure read-only associations",
+        "description": "Add all vehicles and chargers, then finish. To edit an item, remove it and add it again with the same stable ID.",
+        "menu_options": {
+          "vehicle": "Add vehicle",
+          "charger": "Add charger",
+          "remove": "Remove mappings",
+          "finish": "Validate and save"
+        }
+      },
+      "vehicle": {
+        "title": "Add vehicle",
+        "data": {
+          "id": "Stable ID (lowercase letters, numbers and underscores)",
+          "name": "Display name",
+          "device": "Primary source device",
+          "fallback_device": "Fallback source device",
+          "cable": "Primary charge-cable sensor",
+          "tracker": "Primary vehicle tracker",
+          "cable_fallback": "Fallback charge-cable sensor",
+          "tracker_fallback": "Fallback vehicle tracker"
+        }
+      },
+      "charger": {
+        "title": "Add charger",
+        "data": {
+          "id": "Stable ID (lowercase letters, numbers and underscores)",
+          "name": "Display name",
+          "device": "Primary source device",
+          "status": "Physical charger status sensor",
+          "enabled": "Charger enabled switch (validated, never controlled)",
+          "zone_state": "Exact tracker state at this site (for example home)",
+          "override": "Manual-until-disconnect helper (optional)"
+        }
+      },
+      "remove": {
+        "title": "Remove mappings",
+        "data": {
+          "items": "Mappings to remove"
+        }
+      },
+      "finish": {
+        "title": "Save read-only configuration",
+        "description": "Freshness is measured from the last source report, not from the last change. No charging commands are available.",
+        "data": {
+          "stale_seconds": "Maximum source age in seconds"
+        }
+      },
+      "user": {
+        "title": "Configure read-only associations",
+        "description": "Add all vehicles and chargers, then finish. To edit an item, remove it and add it again with the same stable ID.",
+        "menu_options": {
+          "vehicle": "Add vehicle",
+          "charger": "Add charger",
+          "remove": "Remove mappings",
+          "finish": "Validate and save"
+        }
+      }
+    },
+    "error": {
+      "invalid_mapping": "Check unique IDs, entity domains, existing sources and their selected devices. At least one vehicle and charger are required."
+    },
+    "abort": {
+      "already_configured": "Only one Brain instance is needed; add sites and vehicles through its options."
+    }
+  },
+  "options": {
+    "step": {
+      "menu": {
+        "title": "Configure read-only associations",
+        "description": "Add all vehicles and chargers, then finish. To edit an item, remove it and add it again with the same stable ID.",
+        "menu_options": {
+          "vehicle": "Add vehicle",
+          "charger": "Add charger",
+          "remove": "Remove mappings",
+          "finish": "Validate and save"
+        }
+      },
+      "vehicle": {
+        "title": "Add vehicle",
+        "data": {
+          "id": "Stable ID (lowercase letters, numbers and underscores)",
+          "name": "Display name",
+          "device": "Primary source device",
+          "fallback_device": "Fallback source device",
+          "cable": "Primary charge-cable sensor",
+          "tracker": "Primary vehicle tracker",
+          "cable_fallback": "Fallback charge-cable sensor",
+          "tracker_fallback": "Fallback vehicle tracker"
+        }
+      },
+      "charger": {
+        "title": "Add charger",
+        "data": {
+          "id": "Stable ID (lowercase letters, numbers and underscores)",
+          "name": "Display name",
+          "device": "Primary source device",
+          "status": "Physical charger status sensor",
+          "enabled": "Charger enabled switch (validated, never controlled)",
+          "zone_state": "Exact tracker state at this site (for example home)",
+          "override": "Manual-until-disconnect helper (optional)"
+        }
+      },
+      "remove": {
+        "title": "Remove mappings",
+        "data": {
+          "items": "Mappings to remove"
+        }
+      },
+      "finish": {
+        "title": "Save read-only configuration",
+        "description": "Freshness is measured from the last source report, not from the last change. No charging commands are available.",
+        "data": {
+          "stale_seconds": "Maximum source age in seconds"
+        }
+      },
+      "init": {
+        "title": "Configure read-only associations",
+        "description": "Add all vehicles and chargers, then finish. To edit an item, remove it and add it again with the same stable ID.",
+        "menu_options": {
+          "vehicle": "Add vehicle",
+          "charger": "Add charger",
+          "remove": "Remove mappings",
+          "finish": "Validate and save"
+        }
+      }
+    },
+    "error": {
+      "invalid_mapping": "Invalid mapping. Check entity ownership, IDs and required sources."
+    }
+  }
+}
